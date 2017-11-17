@@ -179,6 +179,7 @@ public final class CameraManager {
         Camera theCamera = camera;
         if (theCamera != null && !previewing) {
             theCamera.startPreview();
+            theCamera.cancelAutoFocus();
             previewing = true;
             autoFocusManager = new AutoFocusManager(camera, settings);
             ambientLightManager = new AmbientLightManager(context, this, settings);
